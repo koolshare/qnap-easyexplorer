@@ -1,13 +1,15 @@
 #!/bin/sh
 CONF=/etc/config/qpkg.conf
 QPKG_NAME="LinkEase"
-QPKG_ROOT=`/sbin/getcfg $QPKG_NAME Install_Path -f ${CONF}`
-APACHE_ROOT=`/sbin/getcfg SHARE_DEF defWeb -d Qweb -f /etc/config/def_share.info`
+#QPKG_ROOT=`/sbin/getcfg $QPKG_NAME Install_Path -f ${CONF}`
+#APACHE_ROOT=`/sbin/getcfg SHARE_DEF defWeb -d Qweb -f /etc/config/def_share.info`
 export QNAP_QPKG=$QPKG_NAME
 
 function create_env()
 {
+    #/share/CACHEDEV1_DATA/.qpkg
     PACKAGE_DIR=`/sbin/getcfg "${QPKG_NAME}" Install_Path -d "" -f ${CONF}`
+    #/share/CACHEDEV1_DATA/Public
     PUBLIC_DIR=`getcfg -f /etc/config/smb.conf Public path`
     #setsid nohup  disown
     #(subshell &)
