@@ -1,0 +1,10 @@
+build
+binaries
+arm_64/easy-explorer
+arm-x19/easy-explorer
+arm-x31/easy-explorer
+arm-x41/easy-explorer
+x86/easy-explorer
+x86_64/easy-explorer
+x86_ce53xx/easy-explorer
+
