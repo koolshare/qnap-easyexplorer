@@ -15,7 +15,7 @@ function create_env()
     #(subshell &)
     CUR=`pwd`
     cd $PACKAGE_DIR
-    ./easy-explorer -share $PUBLIC_DIR & disown
+    ./easy-explorer -fe ":8866" -share $PUBLIC_DIR & disown
     cd $CUR
 }
 
